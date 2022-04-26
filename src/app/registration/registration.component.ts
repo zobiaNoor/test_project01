@@ -22,10 +22,10 @@ export class RegistrationComponent implements OnInit {
   onSubmit()
   {
   
-   sessionStorage.setItem('uname', this.username) 
-   sessionStorage.setItem('pname', this.password)
-   sessionStorage.setItem('fname',this.firstName) 
-   sessionStorage.setItem('lname',this.lastName)
+   sessionStorage.setItem('uname',this.username.trim() ) 
+   sessionStorage.setItem('pname', this.password.trim())
+   sessionStorage.setItem('fname',this.firstName.trim()) 
+   sessionStorage.setItem('lname',this.lastName.trim())
    
     this.router.navigate(['/login'])
 

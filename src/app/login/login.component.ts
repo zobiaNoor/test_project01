@@ -17,7 +17,7 @@ export class LoginComponent implements OnInit {
   
   onSubmit()
   {
-    if(this.username==sessionStorage.getItem('uname') && this.password==sessionStorage.getItem('pname'))
+    if(this.username.trim()==sessionStorage.getItem('uname') && this.password.trim()==sessionStorage.getItem('pname'))
     this.router.navigate(['/dashboard'])
      else   
      alert("incorrect password or username" )
