@@ -9,11 +9,20 @@ export class LoginComponent implements OnInit {
   username:any
   password:any
  
-  constructor(private router: Router) {}
+  constructor(private router: Router) {
+    
+      document.body.style.backgroundColor = "aqua";
+
+
+  }
    
 
   ngOnInit(): void {
   }
+
+  ngOnDestroy(){
+    document.body.style.backgroundColor = "";
+      }
   
   onSubmit()
   {
