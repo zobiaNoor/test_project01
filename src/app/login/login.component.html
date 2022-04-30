@@ -11,13 +11,14 @@
           <form class="form-box px-3">
             <div class="form-input">
               <span><i class="fa fa-user-o"></i></span>
-              <input type="text" name="username" placeholder="Username" tabindex="10"  [(ngModel)]="username">
+              <input type="text" name="username" placeholder="Username" tabindex="10"  [formControl]="username">      
             </div>
+            <div><span style="color: red;" *ngIf="username && username.invalid && username.touched">&nbsp;&nbsp;&nbsp;&nbsp;This field is invalid</span> </div>
             <div class="form-input">
               <span><i class="fa fa-key"></i></span>
-              <input type="password" name="password" placeholder="Password"  [(ngModel)]="password">
+              <input type="password" name="password" placeholder="Password"  [formControl]="password">   
             </div>
-
+            <div><span style="color: red;" *ngIf="password && password.invalid && password.touched">&nbsp;&nbsp;&nbsp;&nbsp;This field is invalid </span></div>
             <div class="mb-3">
               <div class="custom-control custom-checkbox">
                 <input type="checkbox" class="custom-control-input" id="cb1" name="">

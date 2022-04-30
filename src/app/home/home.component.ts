@@ -7,6 +7,8 @@ import { Router } from '@angular/router';
 })
 export class HomeComponent implements OnInit {
 
+   isButtonVisible = true;
+
   constructor(private router: Router) {}
    
 
