@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
 export class LoginComponent implements OnInit {
       username =new FormControl('',[Validators.required,Validators.email])
       password =new FormControl('',[Validators.required,Validators.minLength(5)])
+     // mflagDisableMoveTo = new FormControl({ value: true })
   jsonstring:any
   
   constructor(private router: Router) {
